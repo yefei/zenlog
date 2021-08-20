@@ -1,7 +1,7 @@
 # zenlog
 
 ```js
-const { createLogger, FileBufferStream } = require('zenlog');
+const { createLogger, FileBufferStream } = require('zenlog.js');
 
 const log = createLogger();
 log.addStream(new FileBufferStream({ dir: __dirname }));
