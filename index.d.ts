@@ -37,3 +37,5 @@ export declare class Logger {
   error(level: number, ...msg: any): Logger;
   fatal(level: number, ...msg: any): Logger;
 }
+
+export declare function createLogger(fields?: { [key: string]: any }): Logger;

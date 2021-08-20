@@ -1,6 +1,6 @@
 {
   "name": "zenlog.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "node.js lightweight logger",
   "main": "index.js",
   "repository": "https://github.com/yefei/zenlog",
