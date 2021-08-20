@@ -4,16 +4,16 @@ export interface Serializer {
   serialize(key: string, value: any): { [key: string]: any };
 }
 
-export interface ErrorSerializer extends Serializer {}
-export interface TimeSerializer extends Serializer {}
+export declare class ErrorSerializer extends Serializer {}
+export declare class TimeSerializer extends Serializer {}
 
 export interface Stream {
   write(fields: { [key: string]: any }): void;
   close(): void;
 }
 
-export interface ConsoleStream extends Stream {}
-export interface FileBufferStream extends Stream {}
+export declare class ConsoleStream extends Stream {}
+export declare class FileBufferStream extends Stream {}
 
 export const TRACE: number;
 export const DEBUG: number;
