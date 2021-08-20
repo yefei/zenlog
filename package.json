@@ -1,0 +1,24 @@
+{
+  "name": "zenlog",
+  "version": "1.0.0",
+  "description": "node.js logger",
+  "main": "index.js",
+  "repository": "https://github.com/yefei/zenlog",
+  "author": {
+    "name": "YeFei",
+    "email": "316606233@qq.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint . --max-warnings 0",
+    "test": "mocha"
+  },
+  "keywords": [
+    "logger"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "mocha": "^9.0.3"
+  }
+}
