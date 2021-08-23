@@ -19,4 +19,9 @@ describe('zenlog', function() {
     log.child({ err: new Error('error msg') }).error('hello');
     log.close();
   });
+
+  it('4', async function() {
+    const log = createLogger();
+    log.child({ host: '127.0.0.1', url: '/url', ip: '11.1.1.1', method: 'GET' }).error('hello');
+  });
 });

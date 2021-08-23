@@ -1,17 +1,11 @@
 'use strict';
 
 const os = require('os');
-const Logger = require('./lib/logger');
-const {
-  Serializer,
-  ErrorSerializer,
-  TimeSerializer,
-} = require('./lib/serializers');
-const {
-  Stream,
-  ConsoleStream,
-  FileBufferStream,
-} = require('./lib/streams');
+const { Logger, Stream, Serializer } = require('./lib');
+const ErrorSerializer = require('./lib/serializers/error');
+const TimeSerializer = require('./lib/serializers/time');
+const ConsoleStream = require('./lib/streams/console');
+const FileBufferStream = require('./lib/streams/file_buffer');
 const levels = require('./lib/levels');
 
 /**
