@@ -24,4 +24,9 @@ describe('zenlog', function() {
     const log = createLogger();
     log.child({ host: '127.0.0.1', url: '/url', ip: '11.1.1.1', method: 'GET' }).error('hello');
   });
+
+  it('5', async function() {
+    const log = createLogger({ name: 'fei' });
+    log.info('name@hostname');
+  });
 });
