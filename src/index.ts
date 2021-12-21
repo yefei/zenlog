@@ -6,6 +6,7 @@ import TimeSerializer from './serializers/time';
 import ConsoleStream from './streams/console';
 import { Fields } from './types';
 export { default as FileBufferStream } from './streams/file_buffer';
+export { default as Logger } from './logger';
 export * from './types';
 export * from './levels';
 
