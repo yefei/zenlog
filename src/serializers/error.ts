@@ -1,13 +1,11 @@
-'use strict';
+import { Serializer } from "../types";
 
-const { Serializer } = require('..');
-
-class ErrorSerializer extends Serializer {
-  is(key, value) {
+export default class ErrorSerializer implements Serializer {
+  is(key: string, value: any) {
     return value instanceof Error;
   }
 
-  serialize(key, value) {
+  serialize(key: string, value: any) {
     return { [key]: {
       name: value.name,
       message: value.message,
@@ -15,5 +13,3 @@ class ErrorSerializer extends Serializer {
     } };
   }
 }
-
-module.exports = ErrorSerializer;

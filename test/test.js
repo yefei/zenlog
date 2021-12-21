@@ -1,6 +1,6 @@
 'use strict';
 
-const { createLogger, FileBufferStream } = require('..');
+const { createLogger, FileBufferStream } = require('../dist');
 
 describe('zenlog', function() {
   it('1', async function() {

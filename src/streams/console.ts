@@ -1,17 +1,20 @@
-'use strict';
+import { inspect } from 'util';
+import { DEBUG, ERROR, INFO, LEVEL_NAMES, WARN } from '../levels';
+import { Stream, Fields } from '../types';
 
-const util = require('util');
-const { Stream } = require('..');
-const { DEBUG, INFO, WARN, ERROR, LEVELS_NAME } = require('../levels');
-
-function pop(obj, field) {
+/**
+ * 取出指定属性值并删除属性
+ */
+function pop(obj: Fields, field: string) {
   const value = obj[field];
   delete obj[field];
   return value;
 }
 
-class ConsoleStream extends Stream {
-  write(fields) {
+export default class ConsoleStream implements Stream {
+  close(): void {}
+
+  write(fields: Fields) {
     fields = Object.assign({}, fields);
 
     let log;
@@ -33,7 +36,7 @@ class ConsoleStream extends Stream {
     }
 
     if (fields.level !== undefined) {
-      tags.push(LEVELS_NAME[pop(fields, 'level')]);
+      tags.push(LEVEL_NAMES[pop(fields, 'level')]);
     }
 
     // name@hostname
@@ -63,11 +66,9 @@ class ConsoleStream extends Stream {
 
     // other fields
     for (const [key, value] of Object.entries(fields)) {
-      log('%s:', key, util.inspect(value, {
+      log('%s:', key, inspect(value, {
         colors: process.env.NODE_ENV !== 'production',
       }));
     }
   }
 }
-
-module.exports = ConsoleStream;
