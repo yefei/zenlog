@@ -1,10 +1,13 @@
 {
   "name": "zenlog.js",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "node.js lightweight logger",
   "exports": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "repository": "https://github.com/yefei/zenlog",
+  "files": [
+    "dist"
+  ],
   "author": {
     "name": "YeFei",
     "email": "316606233@qq.com"
