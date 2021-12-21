@@ -37,22 +37,17 @@ export interface Stream {
 
 export interface FileBufferStreamOption {
   /**
-   * 存储目录
+   * 存储目录，默认 /tmp
    */
-  dir: string;
+  dir?: string;
 
   /**
-   * 数据落盘间隔
+   * 数据落盘间隔，默认 1000
    */
-  flushInterval: number;
+  flushInterval?: number;
 
   /**
-   * 最大缓冲长度
+   * 最大缓冲长度，默认 1000
    */
-  maxBufferLength: number;
-
-  /**
-   * 记录级别
-   */
-  level: LevelType;
+  maxBufferLength?: number;
 }

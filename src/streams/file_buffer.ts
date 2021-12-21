@@ -1,13 +1,11 @@
 import { appendFile } from 'fs';
 import { join as pathJoin } from 'path';
-import { INFO } from '../levels';
 import { FileBufferStreamOption, Stream, Fields } from '../types';
 
 const defaultOption: FileBufferStreamOption = {
   dir: '/tmp',
   flushInterval: 1000,
   maxBufferLength: 1000,
-  level: INFO,
 };
 
 export default class FileBufferStream implements Stream {
