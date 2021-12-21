@@ -1,6 +1,6 @@
 {
   "name": "zenlog.js",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "node.js lightweight logger",
   "exports": "./dist/index.js",
   "typings": "./dist/index.d.ts",
